@@ -61,7 +61,7 @@
 	color: #5912c8;
 	cursor: pointer;
 	float: right;
-	font-size: clamp(0.8rem, 2.5vw, 1.6rem);
+	font-size: clamp(1rem, 2.5vw, 2rem);
 }
 
 .gestao {
