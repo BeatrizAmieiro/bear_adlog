@@ -93,7 +93,6 @@
 		grid-template-areas: 
 		"prototipo"
 		"textoprot";
-		grid-template-columns: 1fr;
 		grid-template-rows: 50vh auto;
 		row-gap: 1rem;
 		margin-top: 3rem;
