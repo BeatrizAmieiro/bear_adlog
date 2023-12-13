@@ -1,0 +1,207 @@
+/* Import GFonts e Material Icons */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&Family=Goldman:wght@700&family=Courgette&family=Keania+One&display=swap&family=Material+Icons+Round&family=Material+Icons+Outlined');
+
+
+.pag1, .pagport, .pagcont {
+	height: 100vh;
+	background-color: #111;
+	color: white;
+	scroll-snap-align: start;
+}
+
+.pag1 {
+	border-left: outset #5912c8 clamp(0.1rem, 1vw, 1rem);
+}
+
+.pag2 {
+	height: 100vh;
+	background-image: url("../images/parallax/banner2.jpg");
+	background-position: right center;
+	background-size: cover;
+	background-attachment: fixed; /* Efeito Parallax fixo*/ 
+	box-shadow: inset 0 2rem 5rem 0 #111;
+	color: white;
+	scroll-snap-align: start;
+}
+
+
+.pag3 {
+	background-color: #222;
+	color: white;
+}
+
+.header-site {
+	display: grid;
+	grid-template-areas: 
+	"logo nav";
+	grid-template-columns: 
+	14vw auto;
+	height: 10vh;
+	width: 90vw;
+	max-width: 1920px;
+	margin: 0 auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+.logo {
+	grid-area: logo;
+}
+
+.logo img {
+	height: 8vh;
+	width: 7vw;
+	float: left;
+	margin: 1vh auto;
+}
+
+nav {
+	grid-area: nav;
+}
+
+nav ul {
+	float: right;
+}
+
+nav ul li {
+	display: inline-block;
+	line-height: 8vh;
+	margin: 0 1vw;
+}
+
+nav ul li a {
+	color: white;
+	font-size: clamp(1.4rem, 2vw, 2.1rem) ;
+	font-weight: bold;
+}
+
+a:active, a:hover {
+	background: #37009c;
+	transition: 2s;
+	border-radius: 10px;
+}
+
+.checkbtn {
+	font-size: 2.6rem;
+	color: white;
+	float: right;
+	height: 6vh;
+	margin: 1vh auto;
+	overflow-y: hidden;
+	cursor: pointer;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+.topbar, .topbar2, .topbar3 {
+	width: 100vw;
+	height: 12vh;
+	background: #831f9c;
+}
+
+div.titulo {
+	line-height: 12vh;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	font-family: 'Keania One', cursive;
+	color: white;
+}
+
+.foot {
+	grid-area: foot;
+   background-color: #111;
+   color: white;
+   border-top: solid #5912c8;
+}
+
+.contfoot {
+	display: grid;
+	grid-template-areas: "logfoot copyright";
+	gap: 3%;
+	justify-content: left;
+	height: auto;
+	width: 90%;
+	max-width: 1200px;
+	margin: 1vh auto;
+} 
+
+.contfoot img {
+	grid-area: logfoot;
+	height: 7vh;
+	width: auto;
+	float: left;
+}
+
+.contfoot p {
+	grid-area: copyright;
+	line-height: 2vh;
+	margin: 0 auto;
+	padding: 1rem 0;
+	font-size: clamp(0.7rem, 2vw, 1.3rem);
+}
+
+
+/* PHONE E TABLET RETRATO */
+
+@media (max-width: 767px) {
+
+	.pag1, .pag2, .pag3 {
+		height: auto;
+		overflow-y: hidden;
+	}
+
+	.logo img {
+		width: 14vw;
+	}
+
+	.checkbtn {
+		display: block;
+	}
+
+	ul {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(55, 0, 156, 0.7);
+		backdrop-filter: blur(15px);
+		top: 80px;
+		left: -100%; /*Esconde o menu no hamburger*/
+		text-align: center;
+		transition: all .2s;
+	}
+
+	nav ul li {
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+
+	a:active, a:hover {
+		background: #5912c8;
+		transition: 2s;
+	}
+
+	#check:checked ~ ul {
+		left: 0; /*exibe o menu quando clicar no botão*/
+	}
+
+	.topbar {
+		width: 100vw;
+		height: 12vh;
+		margin: 0 auto;
+		margin-top: 5vh;
+	}
+
+	div.titulo {
+		line-height: 12vh;
+		margin: 0 auto;
+		padding: 0 2vw;
+	}
+
+}

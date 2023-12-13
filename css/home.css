@@ -1,0 +1,244 @@
+/* Pagina 1 */
+
+.cont1 {
+		grid-template-areas:
+		"avatar" 
+		"texto1";
+		grid-template-rows: 1fr 1fr;
+		gap: 2vw;
+		height: auto;
+		width: 100vw;
+		margin: 0 auto;
+		align-items: center;
+}
+
+.avatar {
+	grid-area: avatar;
+	height:50vh;
+	width: 100vw;
+	padding: 0 1vw;
+	background: #000;
+	overflow: hidden;
+}
+
+.avatar img {
+	width: 15%;
+	display: block; /*Bloquear a imagem*/
+	margin: 5vh auto;
+	box-shadow: 1px 0 15px 1px #5912c8;
+	border-radius: 100%;
+}
+
+.avatar a {
+	color: white;
+}
+
+.perfil {
+	text-align: center;
+}
+
+.texto1 {
+	grid-area: texto1;
+	font-weight: 700;
+	color: white;
+	margin: 0 auto;
+	padding: 3rem;
+	width: 80vw;
+}
+
+
+/* Página 2*/
+
+.parallax {
+	width: 100vw;
+	height: 100vh;
+	margin: 0 auto;
+}
+
+.cont2 {
+	display: grid;
+	grid-template-areas:
+		"cardcont" 
+		"skill";
+	grid-template-rows: repeat(2,1fr);
+	gap: 3vw;
+	place-items: center;
+	overflow: hidden;
+}
+
+.cardcont {
+	grid-area: cardcont;
+	margin-top: 15vh;
+}
+
+.skill {
+	grid-area: skill;
+	display: flex;
+	justify-content: end;
+	width: 90vw;
+}
+
+.parallax img {
+	width: 40%;
+	height: auto;
+}
+
+button {
+	border-radius: 10px;
+	font-size: clamp(1.2rem, 2vw, 2.5rem);
+	line-height: 7vh;
+	font-weight: bold;
+	background: rgba(0,0,0,0.3);
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.6em;
+	border: solid 1px white;
+	width: 30vw;
+	margin-bottom: 5%;
+}
+
+.cardcont a {
+	background: transparent;
+	text-align: center;
+}
+
+
+
+
+/* Página 3*/
+
+.pag3 {
+	display: grid;
+	grid-template-areas: 
+	"habil"
+	"foot";
+	grid-template-rows: 90vh 10vh;
+}
+
+.habil {
+	grid-area: habil;
+	display: grid;
+	grid-template-areas: 
+	"hard soft";
+	grid-template-columns:
+	repeat(2, 1fr);
+	row-gap: 5%;
+	width: 90vw;
+	max-width: 1600px;
+	justify-self: center;
+}
+
+.hard {
+	grid-area: hard;
+	place-self: center;
+	width: 90%;
+}
+
+.soft {
+	grid-area: soft;
+	place-self: center;
+	width: 70%;
+}
+
+
+.cardHabil {
+	height: auto;
+	margin: 0 auto;
+}
+
+.cardHabil h4 {
+	padding: 0.8rem;
+}
+
+.cardHabil, p {
+	padding: 1% 2%;
+}
+
+
+.nivel {
+	float: right;
+	color: #5912c8;
+}
+
+.foot {
+	overflow: hidden;
+}
+
+
+/* PHONE E TABLET RETRATO */
+
+@media (max-width: 767px) {
+
+/* Página 1 */
+
+	.cont1 {
+		height: auto;
+	}
+
+	.avatar {
+	grid-area: avatar;
+	padding: 0 1vw;
+	}
+	
+	.avatar img {
+		width: 50%;	
+  }
+
+	.texto1 {
+		grid-area: texto1;
+		margin: 0 auto;
+		padding: 1rem;
+	}
+	
+/* Página 2 */
+
+	.parallax img {
+		width: 100%;
+	}
+	
+	button {
+	width: 70vw;
+	margin-bottom: 10%;
+}
+
+
+
+/* Página 3 */
+
+	.pag3 {
+		display: grid;
+		grid-template-areas:
+		"habil"
+		"foot";
+		grid-template-rows: auto 10vh;
+		height: 100vh;
+	}
+
+	.topbar3 {
+		grid-area: topbar3;
+	}
+
+	.habil {
+		grid-area: habil;
+		grid-template-areas: 
+		"hard"
+		"soft";
+		grid-template-rows: repeat(2, auto);
+		align-content: center;
+		width: 90vw;
+	}
+
+
+	.hard {
+		grid-area: hard;
+		width: 80vw;
+	}
+
+	.soft {
+		grid-area: soft;
+		width: 80vw;
+	}
+
+	.foot {
+		grid-area: foot;
+	}
+}
